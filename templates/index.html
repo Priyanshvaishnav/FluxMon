@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FluxMon</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Menu Bar</h2>
+    <ul>
+      <li><a href="#" onclick="showSection('cpu')">CPU</a></li>
+      <li><a href="#" onclick="showSection('ram')">RAM</a></li>
+      <li><a href="#" onclick="showSection('storage')">Storage</a></li>
+      <li><a href="#" onclick="showSection('network')">Network</a></li>
+      <li><a href="#" onclick="showSection('battery')">Battery</a></li>
+      <li><a href="#" onclick="showSection('system-info')">System Info</a></li>
+      <li><a href="#" onclick="showSection('activity')">Activity</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h1>FluxMon: The System Monitoring Dashboard</h1>
+
+    <!-- CPU Section -->
+    <div id="cpu" class="section">
+      <h2>CPU Usage</h2>
+      <div class="gauge">
+        <span id="cpu-usage">0%</span>
+      </div>
+    </div>
+
+    <!-- RAM Section -->
+    <div id="ram" class="section">
+      <h2>RAM Usage</h2>
+      <div class="stats">
+        <p><strong>Total RAM:</strong> <span id="ram-total">0</span> GB</p>
+        <p><strong>Used RAM:</strong> <span id="ram-used">0</span> GB</p>
+        <p><strong>Available RAM:</strong> <span id="ram-available">0</span> GB</p>
+      </div>
+    </div>
+
+    <!-- Storage Section -->
+    <div id="storage" class="section">
+      <h2>Storage</h2>
+      <div class="stats">
+        <p><strong>Total Storage:</strong> <span id="storage-total">0</span> GB</p>
+        <p><strong>Used Storage:</strong> <span id="storage-used">0</span> GB</p>
+        <p><strong>Free Storage:</strong> <span id="storage-free">0</span> GB</p>
+      </div>
+    </div>
+
+    <!-- Network Section -->
+    <div id="network" class="section">
+      <h2>Network Activity</h2>
+      <div class="stats">
+        <p><strong>Bytes Sent:</strong> <span id="network-sent">0</span> MB</p>
+        <p><strong>Bytes Received:</strong> <span id="network-received">0</span> MB</p>
+      </div>
+    </div>
+
+    <!-- Battery Section -->
+    <div id="battery" class="section">
+      <h2>Battery</h2>
+      <p><strong>Battery Level:</strong> <span id="battery-percent">0%</span></p>
+      <p><strong>Charging:</strong> <span id="battery-charging">No</span></p>
+      <p><strong>Time Left:</strong> <span id="battery-time">N/A</span></p>
+    </div>
+
+    <!-- System Information Section -->
+    <div id="system-info" class="section">
+      <h2>System Information</h2>
+      <p><strong>Architecture:</strong> <span id="system-arch">N/A</span></p>
+      <p><strong>Platform:</strong> <span id="system-platform">N/A</span></p>
+      <p><strong>Version:</strong> <span id="system-version">N/A</span></p>
+      <p><strong>Processor:</strong> <span id="system-processor">N/A</span></p>
+      <p><strong>Machine:</strong> <span id="system-machine">N/A</span></p>
+    </div>
+
+    <!-- Activity Section -->
+    <div id="activity" class="section">
+      <h2>Activity</h2>
+      <ul id="process-list">
+        <!-- Processes will be populated dynamically -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
