@@ -15,7 +15,7 @@ spec:
         app: fluxmon
     spec:
       containers:
-      - name: python-webapp
-        image: fluxmon:latest  # Replace with your image
+      - name: fluxmon
+        image: fluxmon:latest  
         ports:
         - containerPort: 8050
