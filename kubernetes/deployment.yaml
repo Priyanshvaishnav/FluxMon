@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fluxmon
+  labels:
+    app: fluxmon
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fluxmon
+  template:
+    metadata:
+      labels:
+        app: fluxmon
+    spec:
+      containers:
+      - name: python-webapp
+        image: fluxmon:latest  # Replace with your image
+        ports:
+        - containerPort: 8050
