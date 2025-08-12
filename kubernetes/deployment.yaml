@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fluxmon
+  name: dumsumoh
   labels:
-    app: fluxmon
+    app: dumsumoh
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: fluxmon
+      app: dumsumoh
   template:
     metadata:
       labels:
-        app: fluxmon
+        app: dumsumoh
     spec:
       containers:
-      - name: fluxmon
-        image: fluxmon:latest  
+      - name: dumsumoh
+        image: priyansh21/dumsumoh:tagname 
         ports:
         - containerPort: 8050
